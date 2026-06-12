@@ -1,0 +1,54 @@
+<div class="encabezado">
+    <h2>Formulario de Usuario</h2>
+</div>
+<div class="form-registro" >
+    @if(!datosEnviados) {
+    <form [formGroup]="formulario" (ngSubmit)="submitFormulario()">
+        <div class="form-grupo" >
+            <label for="username" class="form-label">Nombre:</label>
+            <input id="username" formControlName="username" type="text" 
+            />
+            @if(getFormularioError('username')) {
+            <small class="mensaje-error">{{ getFormularioError('username') }}</small>
+            }
+        </div> 
+        <div class="form-grupo">
+            <label for="email" class="form-label">E-mail:</label>
+            <input id="email" formControlName="email" type="email" 
+            />
+            @if(getFormularioError('email')) {
+            <small class="mensaje-error">{{ getFormularioError('email') }}</small>
+            }
+        </div>
+        <div class="form-grupo">
+            <label for="rol" class="form-label">Rol:</label>
+            <select id="rol" formControlName="rol">
+                <option value="">Seleccione un rol</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+            @if(getFormularioError('rol')) {
+            <small class="mensaje-error">{{ getFormularioError('rol') }}</small>
+            }
+        </div>
+        <div class="form-grupo">
+            <button type="submit" class="btn" [disabled]="formulario.invalid">Registrar</button>
+        </div>
+    </form>
+}
+
+@if(datosEnviados) {
+    <!-- Sección que se muestra después del submit -->
+    
+    <div class="mensaje-exito">
+        <h3>Operación exitosa</h3>
+        <p>El usuario ha sido registrado correctamente.</p>
+    </div>
+    
+}
+
+</div>
+
+<div class="botones-acciones">
+   <button class="btn" [routerLink]="['/usuarios']">Volver a usuarios</button>
+</div>

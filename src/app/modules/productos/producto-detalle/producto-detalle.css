@@ -1,0 +1,59 @@
+.titulo-producto {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.detalles-producto p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 6px;
+}
+
+/* Sección de Precios */
+.precios-producto {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #e2e8f0;
+}
+
+.precios-producto p {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.precio-original { color: #94a3b8; }
+.precio-original span { text-decoration: line-through; }
+
+.descuento { color: #e74c3c; font-weight: 500; }
+
+.precio-final {
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    color: #2ecc71;
+    margin-top: 8px;
+}
+
+.btn {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-principal {
+    width: auto;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+}
+
+.btn-principal:hover { background-color: #2980b9; }
+

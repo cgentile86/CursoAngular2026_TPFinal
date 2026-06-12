@@ -1,0 +1,24 @@
+@if(producto){
+    <div>
+        <h3 class="titulo-producto">{{producto.nombre}}</h3>
+        <div class="detalles-producto">
+            <p><strong>Código:</strong> {{producto.codigo}}</p>
+            <p><strong>Marca:</strong> {{producto.marca}}</p>            
+            <p><strong>Fecha Lanzamiento:</strong> {{producto.fechaLanzamiento | date : 'dd/MM/yyyy'}}</p>
+        </div>
+        <div class="precios-producto">
+            <p class="precio-original">Precio: <span>{{producto.precio | currency}}</span></p>
+            <p class="descuento">Descuento: <span>{{producto.descuento | percent}}</span></p>
+            <p class="precio-final">Total: <span>{{producto.precio | descuento: producto.descuento | currency}}</span></p>
+        </div>
+        <button class="btn btn-principal" (click)='volver()'>Volver al catálogo</button>
+    </div>
+    
+}
+@else {
+    <div>
+        <h3>Error de navegacion:</h3>
+        <p>{{errorMsg}}</p>
+        <button class="btn btn-principal" (click)='volver()'>Volver al catálogo</button>
+    </div>
+}

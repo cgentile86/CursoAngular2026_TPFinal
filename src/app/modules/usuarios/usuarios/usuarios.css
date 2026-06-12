@@ -1,0 +1,33 @@
+.titulo-usuario {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.detalles-usuario p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 6px;
+}
+
+
+.btn {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-principal {
+    width: auto;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+}
+
+.btn-principal:hover { background-color: #2980b9; }

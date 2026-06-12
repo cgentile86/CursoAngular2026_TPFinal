@@ -1,0 +1,40 @@
+<div class="contenedor-principal">
+    <div class="encabezado">
+        <h2>Catálogo de Productos</h2>
+        <button class="btn btn-principal" (click)="agregarProductoRandom()">Agregar Producto Aleatorio</button>
+    </div>
+
+    @if(listaProductos.length > 0){
+    <div class="contenedor-productos">
+        @for(producto of listaProductos; track producto.id){
+            <div class="tarjeta-producto">
+                <div class="info-producto">
+                    <h3 class="titulo-producto">{{producto.nombre}}</h3>
+                    <div class="detalles-producto">
+                        <p><strong>Código:</strong> {{producto.codigo}}</p>
+                        <p><strong>Marca:</strong> {{producto.marca}}</p>            
+                        <p><strong>Fecha Lanzamiento:</strong> {{producto.fechaLanzamiento | date : 'dd/MM/yyyy'}}</p>
+                    </div>
+                    <div class="precios-producto">
+                        <p class="precio-original">Precio: <span>{{producto.precio | currency}}</span></p>
+                        <p class="descuento">Descuento: <span>{{producto.descuento | percent}}</span></p>
+                        <p class="precio-final">Total: <span>{{producto.precio | descuento: producto.descuento | currency}}</span></p>
+                    </div>
+                    <div></div>
+                    <a [routerLink]="['/productos', producto.id]">
+                        Ver Detalles
+                    </a>
+                </div>
+                <div class="acciones-producto">
+                    <button class="btn btn-eliminar" (click)="eliminarProducto(producto.id)">Eliminar</button>
+                </div>
+            </div>
+        }
+    </div>
+    } @else {
+        <p class="sin-productos">La lista de productos está vacía.</p>
+    }
+</div>
+
+
+

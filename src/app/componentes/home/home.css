@@ -1,0 +1,12 @@
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eef2f3;
+    padding-bottom: 15px;
+}
+.encabezado h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+}

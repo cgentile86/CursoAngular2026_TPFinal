@@ -1,0 +1,25 @@
+<div class="encabezado">
+    <h2>Detalle de usuario</h2>
+</div>
+@if(usuario){
+    <div>
+        <div class="detalles-usuario">
+            <p><strong>Id:</strong> {{usuario.id}}</p>
+            <p><strong>Nombre:</strong> {{usuario.username}}</p>
+            <p><strong>Email:</strong> {{usuario.email}}</p>
+            <p><strong>Rol:</strong> {{usuario.rol}}</p>
+            <p><strong>Estado:</strong> {{usuario.estado}}</p>
+        </div>
+        
+    </div>
+    
+}
+@else {
+    <div>
+        <h3>Error de navegación:</h3>
+        <p>{{errorMsg}}</p>
+    </div>
+}
+<div class="botones-acciones">
+    <button class="btn" (click)='volver()'>Volver a usuarios</button>
+</div>

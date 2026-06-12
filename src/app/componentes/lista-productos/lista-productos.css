@@ -1,0 +1,135 @@
+/* Contenedor General */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Encabezado */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eef2f3;
+    padding-bottom: 15px;
+}
+
+.encabezado h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+/* Grilla de Productos */
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjeta de Producto */
+.tarjeta-producto {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eef2f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Bloque de Información */
+.info-producto {
+    padding: 20px;
+}
+
+.titulo-producto {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.detalles-producto p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 6px;
+}
+
+/* Sección de Precios */
+.precios-producto {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #e2e8f0;
+}
+
+.precios-producto p {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.precio-original { color: #94a3b8; }
+.precio-original span { text-decoration: line-through; }
+
+.descuento { color: #e74c3c; font-weight: 500; }
+
+.precio-final {
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    color: #2ecc71;
+    margin-top: 8px;
+}
+
+/* Botones */
+.acciones-producto {
+    padding: 0 20px 20px 20px;
+}
+
+.btn {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-principal {
+    width: auto;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+}
+
+.btn-principal:hover { background-color: #2980b9; }
+
+.btn-eliminar {
+    background-color: #fff5f5;
+    color: #e53e3e;
+    border: 1px solid #fed7d7;
+}
+
+.btn-eliminar:hover {
+    background-color: #e53e3e;
+    color: white;
+}
+
+/* Estado Vacío */
+.sin-productos {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 1.1rem;
+    margin-top: 50px;
+}
