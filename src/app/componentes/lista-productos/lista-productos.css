@@ -1,6 +1,6 @@
 /* Contenedor General */
 .contenedor-principal {
-    max-width: 1200px;
+   
     margin: 0 auto;
     padding: 20px;
     font-family: 'Segoe UI', system-ui, sans-serif;
@@ -16,10 +16,6 @@
     padding-bottom: 15px;
 }
 
-.encabezado h2 {
-    color: #2c3e50;
-    font-size: 1.8rem;
-}
 
 /* Grilla de Productos */
 .contenedor-productos {
@@ -106,14 +102,22 @@
     transition: background-color 0.2s ease;
 }
 
-.btn-principal {
-    width: auto;
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
+.btnprincipal {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  background-color: #3182ce;
+  color: white;
 }
 
-.btn-principal:hover { background-color: #2980b9; }
+.btnprincipal:hover {
+  background-color: #2b6cb0;
+}
+
 
 .btn-eliminar {
     background-color: #fff5f5;
@@ -133,3 +137,23 @@
     font-size: 1.1rem;
     margin-top: 50px;
 }
+
+encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eef2f3;
+    padding-bottom: 15px;
+}
+
+.encabezado h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+.acciones-usuarios {
+    margin-bottom: 20px;
+} 
+
+

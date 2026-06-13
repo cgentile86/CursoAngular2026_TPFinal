@@ -26,7 +26,7 @@
           <td>{{ usuario.estado }}</td>
           <td class="texto-centrado">
             <div class="acciones">
-              <button class="btn btn-ver" [routerLink]="['/usuarios/consulta/', usuario.id]">
+              <button class="btn btn-ver" [routerLink]="['/usuarios/detalle/', usuario.id]">
                 Ver
               </button>
               <button class="btn btn-editar" (click)="cambiarEstadoUsuario(usuario.id)">

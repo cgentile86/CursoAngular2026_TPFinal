@@ -1,9 +1,7 @@
-<div class="contenedor-principal">
-    <div class="encabezado">
+<div class="encabezado">
         <h2>Catálogo de Productos</h2>
-        <button class="btn btn-principal" (click)="agregarProductoRandom()">Agregar Producto Aleatorio</button>
-    </div>
-
+</div>
+<div class="contenedor-principal">
     @if(listaProductos.length > 0){
     <div class="contenedor-productos">
         @for(producto of listaProductos; track producto.id){

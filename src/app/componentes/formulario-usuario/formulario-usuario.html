@@ -6,7 +6,13 @@
     <form [formGroup]="formulario" (ngSubmit)="submitFormulario()">
         <div class="form-grupo" >
             <label for="username" class="form-label">Nombre:</label>
-            <input id="username" formControlName="username" type="text" 
+            <input id="username" formControlName="username" type="text"
+            [ngClass]="{'invalid-input': formulario.get('username')?.invalid 
+            && 
+            formulario.get('username')?.touched,
+            'valid-input': formulario.get('username')?.valid 
+            && 
+            formulario.get('username')?.touched}"
             />
             @if(getFormularioError('username')) {
             <small class="mensaje-error">{{ getFormularioError('username') }}</small>
@@ -15,6 +21,12 @@
         <div class="form-grupo">
             <label for="email" class="form-label">E-mail:</label>
             <input id="email" formControlName="email" type="email" 
+            [ngClass]="{'invalid-input': formulario.get('email')?.invalid 
+            && 
+            formulario.get('email')?.touched,
+            'valid-input': formulario.get('email')?.valid 
+            && 
+            formulario.get('email')?.touched}"
             />
             @if(getFormularioError('email')) {
             <small class="mensaje-error">{{ getFormularioError('email') }}</small>

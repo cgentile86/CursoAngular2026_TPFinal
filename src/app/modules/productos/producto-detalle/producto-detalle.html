@@ -1,3 +1,6 @@
+<div class="encabezado">
+    <h2>Detalle de producto</h2>
+</div>
 @if(producto){
     <div>
         <h3 class="titulo-producto">{{producto.nombre}}</h3>
@@ -11,7 +14,9 @@
             <p class="descuento">Descuento: <span>{{producto.descuento | percent}}</span></p>
             <p class="precio-final">Total: <span>{{producto.precio | descuento: producto.descuento | currency}}</span></p>
         </div>
-        <button class="btn btn-principal" (click)='volver()'>Volver al catálogo</button>
+        <div class="botones-acciones">
+            <button class="btn" (click)='volver()'>Volver al catálogo</button>
+        </div>
     </div>
     
 }
@@ -19,6 +24,6 @@
     <div>
         <h3>Error de navegacion:</h3>
         <p>{{errorMsg}}</p>
-        <button class="btn btn-principal" (click)='volver()'>Volver al catálogo</button>
+        <button class="btn" (click)='volver()'>Volver al catálogo</button>
     </div>
 }
